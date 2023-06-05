@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SwipeItemIsEnabledBindingIssue.MainPage">
+
+    <SwipeView VerticalOptions="CenterAndExpand">
+        <SwipeView.LeftItems>
+            <SwipeItems>
+                <SwipeItem Text="{Binding ItemText}"
+                           IsEnabled="{Binding IsEnabled}"
+                           BackgroundColor="{Binding Background}"
+                           Command="{Binding Command}"
+                           IsVisible="{Binding IsVisable}"/>
+            </SwipeItems>
+        </SwipeView.LeftItems>
+
+        <Grid HeightRequest="60"
+              WidthRequest="300"
+              BackgroundColor="LightGray">
+            <Label Text="{Binding ItemText}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+        </Grid>
+    </SwipeView>
+
+</ContentPage>
